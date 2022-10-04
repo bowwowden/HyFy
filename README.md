@@ -9,9 +9,6 @@ This collection will be unique in that it is mostly focused on algorithms and da
 More sources on Hy lisp.
 https://docs.hylang.org/en/stable/tutorial.html#literals
 
+More info on Lisp vs Python
+https://norvig.com/python-lisp.html
 
-
-defmacro
-defgeneric
-defclass
-defn

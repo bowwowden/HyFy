@@ -1,34 +1,30 @@
-; struct point
+; struct Node
 ; point parent, if parent is null, point is root
-(defclass Point []
+
+(defclass Node []
     (defn __init__ [self data parent]
         (setv self.data data)
         (setv self.parent parent)
         )
     )
 
-; (setv p1 (Point 15))
-; (print p1.parent)
+; in common lisp, this might be implemented like
+; (defstruct point parent)
 
-(setv p1 (Point 1 None))
-(setv p2 (Point 2 p1))
+(setv p1 (Node 1 None))
+(setv p2 (Node 2 p1))
 
 (print "p1 data" p1.data)
 (print "p2 data" p2.data)
 
-; function union (point 1 point 2)
-; join the subsets of point1 and point2
-
-; for now, traverse point
-(defn uf-find [point]
+; for now, traverse point to parent
+(defn parent-find [point]
     (print point.data)
     (if (is None point.parent)
         (print "found root")
         (uf-find point.parent))
-        )
+        )  
 
 (print "starting with p2 as first node")
-(uf-find p2)
+(parent-find p2)
 
-; function union find (point)
-; determine id of subset

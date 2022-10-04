@@ -29,3 +29,26 @@ union-find:
 a data structure that requires an algorithm.
 consider two nodes. if a path exists between them, they are in the same component. 
 union find is an appropriate algorithm for set membership in dynamic situations, like watching a moving car in a video.
+
+unions are a natural data structure in C and Python. 
+Not so much in Lisp. However, this is the easy way in Python.
+
+```python
+x = {"apple", "banana", "cherry"}
+y = {"google", "microsoft", "apple"}
+
+z = x.union(y) 
+
+print(z)
+```
+
+In Hy 
+
+```hy
+(setv x #{"apple" "banana" "cherry})
+(setv y ${"google" "microsoft" "apple"})
+
+(setv z (x.union y))
+(print z)
+```
+
